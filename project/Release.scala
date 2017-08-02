@@ -10,7 +10,7 @@ object JobServerRelease {
 
   lazy val implicitlySettings = {
     lsSettings ++ Seq(
-      homepage := Some(url("https://github.com/spark-jobserver/spark-jobserver")),
+      homepage := Some(url("https://github.com/TimonSotiropoulos/spark-jobserver")),
       tags in lsync := Seq("spark", "akka", "rest"),
       description in lsync := "REST job server for Apache Spark",
       externalResolvers in lsync := Seq("Job Server Bintray" at "http://dl.bintray.com/spark-jobserver/maven"),

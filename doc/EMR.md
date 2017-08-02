@@ -47,7 +47,7 @@ InstanceCount=10,BidPrice=2.99,Name=sparkSlave,InstanceGroupType=CORE,InstanceTy
 3. Clone spark-jobserver and checkout release v0.6.1
  ```
  cd /mnt/work
- git clone https://github.com/spark-jobserver/spark-jobserver.git
+ git clone https://github.com/TimonSotiropoulos/spark-jobserver.git
  cd spark-jobserver
  git checkout v0.6.1
  ```

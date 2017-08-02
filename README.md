@@ -90,7 +90,7 @@ Spark Job Server is now included in Datastax Enterprise 4.8!
 
 - *"Spark as a Service"*: Simple REST interface (including HTTPS) for all aspects of job, context management
 - Support for Spark SQL, Hive, Streaming Contexts/jobs and custom job contexts!  See [Contexts](doc/contexts.md).
-- [Python](doc/python.md), Scala, and [Java](doc/javaapi.md) (see [TestJob.java](https://github.com/spark-jobserver/spark-jobserver/blob/master/job-server-api/src/main/java/spark/jobserver/api/TestJob.java)) support
+- [Python](doc/python.md), Scala, and [Java](doc/javaapi.md) (see [TestJob.java](https://github.com/TimonSotiropoulos/spark-jobserver/blob/master/job-server-api/src/main/java/spark/jobserver/api/TestJob.java)) support
 - LDAP Auth support via Apache Shiro integration
 - Separate JVM per SparkContext for isolation (EXPERIMENTAL)
 - Supports sub-second low-latency jobs via long-running job contexts
@@ -286,7 +286,7 @@ curl -d "input.string = a b c a b see" "localhost:8090/jobs?appName=test&classPa
 ## Create a Job Server Project
 ### Creating a project from scratch using giter8 template
 
-There is a giter8 template available at https://github.com/spark-jobserver/spark-jobserver.g8
+There is a giter8 template available at https://github.com/TimonSotiropoulos/spark-jobserver.g8
 
     $ sbt new spark-jobserver/spark-jobserver.g8
 
@@ -878,7 +878,7 @@ For user/dev questions, we are using google group for discussions:
 <https://groups.google.com/forum/#!forum/spark-jobserver>
 
 Please report bugs/problems to:
-<https://github.com/spark-jobserver/spark-jobserver/issues>
+<https://github.com/TimonSotiropoulos/spark-jobserver/issues>
 
 ## License
 Apache 2.0, see LICENSE.md

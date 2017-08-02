@@ -19,7 +19,7 @@ Spark-jobserver 提供了一个 RESTful 接口来提交和管理 spark 的 jobs�
 
 ## 版本信息
 
-请参考官方文档：[版本信息](https://github.com/spark-jobserver/spark-jobserver#version-information)
+请参考官方文档：[版本信息](https://github.com/TimonSotiropoulos/spark-jobserver#version-information)
 
 ## 部署
 

@@ -114,7 +114,7 @@ class AkkaClusterSupervisorActor(daoActor: ActorRef) extends InstrumentedActor {
       val mergedConfig = contextConfig.withFallback(defaultContextConfig)
       // TODO(velvia): This check is not atomic because contexts is only populated
       // after SparkContext successfully created!  See
-      // https://github.com/spark-jobserver/spark-jobserver/issues/349
+      // https://github.com/TimonSotiropoulos/spark-jobserver/issues/349
       if (contexts contains name) {
         originator ! ContextAlreadyExists
       } else {
@@ -135,7 +135,7 @@ class AkkaClusterSupervisorActor(daoActor: ActorRef) extends InstrumentedActor {
         contextName = userNamePrefix + java.util.UUID.randomUUID().toString().take(8) + "-" + classPath
       } while (contexts contains contextName)
       // TODO(velvia): Make the check above atomic.  See
-      // https://github.com/spark-jobserver/spark-jobserver/issues/349
+      // https://github.com/TimonSotiropoulos/spark-jobserver/issues/349
 
       startContext(contextName, mergedConfig, true) { ref =>
         originator ! contexts(contextName)

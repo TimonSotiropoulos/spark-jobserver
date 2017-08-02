@@ -4,7 +4,7 @@
 
 (I would like to thank Jon Buffington for sharing the config tips below.... @velvia)
 
-Note:  This is for yarn with docker.  If you are looking to deploy on a yarn cluster via EMR, then this link would be more useful [EMR](https://github.com/spark-jobserver/spark-jobserver/blob/master/doc/EMR.md)
+Note:  This is for yarn with docker.  If you are looking to deploy on a yarn cluster via EMR, then this link would be more useful [EMR](https://github.com/TimonSotiropoulos/spark-jobserver/blob/master/doc/EMR.md)
 
 ### Configuring the Spark-Jobserver Docker package to run in Yarn-Client Mode
 

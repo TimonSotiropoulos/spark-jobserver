@@ -7,9 +7,9 @@ bin=`cd "$bin"; pwd`
 #get spark deployment scripts if they haven't been downloaded and extracted yet
 SPARK_DIR="$bin"/../ec2Cluster
 if [ ! -d "$SPARK_DIR" ]; then
-    wget -P "$SPARK_DIR"/deploy.generic/root/spark-ec2 https://raw.githubusercontent.com/amplab/spark-ec2/$SPARK_EC2_BRANCH/deploy.generic/root/spark-ec2/ec2-variables.sh
-    wget -P "$SPARK_DIR" https://raw.githubusercontent.com/amplab/spark-ec2/$SPARK_EC2_BRANCH/spark_ec2.py
-    wget -P "$SPARK_DIR" https://raw.githubusercontent.com/amplab/spark-ec2/$SPARK_EC2_BRANCH/spark-ec2
+    wget -P "$SPARK_DIR"/deploy.generic/root/spark-ec2 https://raw.githubusercontent.com/TimonSotiropoulos/spark-ec2/$SPARK_EC2_BRANCH/deploy.generic/root/spark-ec2/ec2-variables.sh
+    wget -P "$SPARK_DIR" https://raw.githubusercontent.com/TimonSotiropoulos/spark-ec2/$SPARK_EC2_BRANCH/spark_ec2.py
+    wget -P "$SPARK_DIR" https://raw.githubusercontent.com/TimonSotiropoulos/spark-ec2/$SPARK_EC2_BRANCH/spark-ec2
     chmod u+x "$SPARK_DIR"/*
 fi
 
@@ -18,7 +18,8 @@ EC2DEPLOY="$SPARK_DIR"/spark-ec2
 if [ -n "$VPC_ID" ]; then
    VPC_OPTION="--vpc-id $VPC_ID"
 fi
-"$EC2DEPLOY" --copy-aws-credentials --key-pair=$KEY_PAIR --hadoop-major-version=yarn --identity-file=$SSH_KEY --region=us-east-1 --zone=$ZONE --spark-version=$SPARK_VERSION --instance-type=$INSTANCE_TYPE --slaves $NUM_SLAVES $VPC_OPTION $SPARK_EC2_OPTIONS launch $CLUSTER_NAME
+
+"$EC2DEPLOY" --copy-aws-credentials --key-pair=$KEY_PAIR --hadoop-major-version=yarn --identity-file=$SSH_KEY --region=ap-southeast-2 --zone=$ZONE --spark-version=$SPARK_VERSION --instance-type=$INSTANCE_TYPE --slaves $NUM_SLAVES $VPC_OPTION $SPARK_EC2_OPTIONS launch $CLUSTER_NAME
 #There is only 1 deploy host. However, the variable is plural as that is how Spark Job Server named it.
 #To minimize changes, I left the variable name alone.
 export DEPLOY_HOSTS=$("$EC2DEPLOY" $SPARK_EC2_OPTIONS get-master $CLUSTER_NAME | tail -n1)
