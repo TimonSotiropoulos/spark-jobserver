@@ -1,13 +1,13 @@
 #MUST CUSTOMIZE THESE TO RUN
 # SSH Key to login to server that hosts Spark master node and Job Server
-SSH_KEY=PATH_TO_SSH_KEY
-KEY_PAIR=EC2_KEY_PAIR
-ZONE=us-east-1a
+SSH_KEY=/Users/krombopulos/.ssh/hadoop-test-aws-key-pair.pem
+KEY_PAIR=hadoop-test-aws-key-pair
+ZONE=ap-southeast-2a
 # Leave VPC_ID blank if no VPC
 VPC_ID=
-CLUSTER_NAME=large19Slaves
-INSTANCE_TYPE=r3.large
-NUM_SLAVES=19
+CLUSTER_NAME=spark_job_cluster
+INSTANCE_TYPE=m3.large
+NUM_SLAVES=1
 SPARK_VERSION=2.0.2
 HADOOP_VERSION=2.6
 SPARK_EC2_BRANCH=branch-2.0
